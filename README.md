@@ -5,3 +5,9 @@ Blood Rain animation -- A simple yet satisfying Java swing program where red rec
 -- No Music & no controls, just an animation
 
 ![red_drop](https://user-images.githubusercontent.com/21260839/30390790-2d4fb7ae-98af-11e7-9aab-898a33bb5044.png)
+
+# =============================
+
+-- Process in motion -- 
+
+![blood rain screenshot](https://user-images.githubusercontent.com/21260839/30393894-65731676-98b9-11e7-850e-460e69fcf57a.PNG)
