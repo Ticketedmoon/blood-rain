@@ -1,4 +1,5 @@
 import java.awt.Color;
+
 import java.awt.Graphics;
 import java.util.Random;
 
@@ -8,6 +9,7 @@ public class RainDrop
 	private int positionY = 0;
 	private int width;
 	private int height;
+	private float speed;
 	
 	public Color myColor;
 	
@@ -15,10 +17,18 @@ public class RainDrop
 	{
 		positionX = (Math.abs(new Random().nextInt(500)));
 		positionY = -(Math.abs(new Random().nextInt(1000)));
+		Random rand = new Random();
+		
+		// RGB values for random multi-colored cells.
+		// float r = rand.nextFloat(); 		
+		// float g = rand.nextFloat();
+		// float b = rand.nextFloat();
 
-		width = 2;
-		height = 15;
-		myColor = Color.red;
+		this.speed = (Math.abs(new Random().nextInt(3)));
+		
+		width = (Math.abs(new Random().nextInt(3)));
+		height = (Math.abs(new Random().nextInt(15)));
+		myColor = Color.RED;
 		
 	}
 	
@@ -41,6 +51,6 @@ public class RainDrop
 	{
 		g.setColor(myColor);
 		g.fillRect(this.positionX, this.positionY, this.width, this.height);
-		this.positionY ++;
+		this.positionY += this.speed;
 	}
 }

@@ -8,8 +8,8 @@ import javax.swing.Timer;
 
 public class RenderPanel extends JPanel implements ActionListener
 {	
-	RainDrop [] rain = new RainDrop[200];
-	Timer t = new Timer(1, this);
+	RainDrop [] rain = new RainDrop[400];
+	Timer t = new Timer(3, this);
 	
 	public RenderPanel()
 	{
