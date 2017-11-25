@@ -6,7 +6,7 @@ import java.util.Random;
 public class RainDrop 
 {
 	private int positionX;
-	private int positionY = 0;
+	private float positionY = 0;
 	private int width;
 	private int height;
 	private float speed;
@@ -15,20 +15,22 @@ public class RainDrop
 	
 	public RainDrop()
 	{
-		positionX = (Math.abs(new Random().nextInt(500)));
+		positionX = (Math.abs(new Random().nextInt(1000)));
 		positionY = -(Math.abs(new Random().nextInt(1000)));
-		Random rand = new Random();
+		Random speed = new Random();
 		
 		// RGB values for random multi-colored cells.
-		// float r = rand.nextFloat(); 		
-		// float g = rand.nextFloat();
-		// float b = rand.nextFloat();
+		// float r = speed.nextFloat(); 		
+		// float g = speed.nextFloat();
+		// float b = speed.nextFloat();
 
-		this.speed = (Math.abs(new Random().nextInt(3)));
+		float velocity = speed.nextFloat() + 1;
+		this.speed = (Math.abs(velocity*1.3F));
+		System.out.println(this.speed);
 		
 		width = (Math.abs(new Random().nextInt(3)));
 		height = (Math.abs(new Random().nextInt(15)));
-		myColor = Color.RED;
+		myColor = Color.red;
 		
 	}
 	
@@ -37,7 +39,7 @@ public class RainDrop
 		this.positionX = x;
 	}
 	
-	public int getY()
+	public float getY()
 	{
 		return this.positionY;
 	}
@@ -50,7 +52,7 @@ public class RainDrop
 	public void drawToScreen(Graphics g)
 	{
 		g.setColor(myColor);
-		g.fillRect(this.positionX, this.positionY, this.width, this.height);
+		g.fillRect(this.positionX, (int) this.positionY, this.width, this.height);
 		this.positionY += this.speed;
 	}
 }

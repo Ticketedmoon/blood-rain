@@ -31,7 +31,7 @@ public class RenderPanel extends JPanel implements ActionListener
 		{
 			if(r.getY() > this.getHeight())
 			{
-				r.setX((Math.abs(new Random().nextInt(500))));
+				r.setX((Math.abs(new Random().nextInt(1000))));
 				r.setY(0);
 			}
 			

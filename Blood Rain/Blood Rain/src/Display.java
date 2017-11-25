@@ -16,7 +16,7 @@ public class Display
 		renderPanel.setFocusable(true);
 		
 		frame = new JFrame("Blood Rain -- Created by Shane");
-		frame.setSize(500, 520);
+		frame.setSize(1000, 520);
 		frame.setResizable(false);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setLocation(dim.width/2 - frame.getWidth()/2, dim.height/2 - frame.getHeight()/2 );
