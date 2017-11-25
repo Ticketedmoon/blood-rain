@@ -12,3 +12,8 @@ Blood Rain animation -- A simple yet satisfying Java swing program where red rec
 -- Process in motion -- 
 
 ![blood rain screenshot](https://user-images.githubusercontent.com/21260839/30393894-65731676-98b9-11e7-850e-460e69fcf57a.PNG)
+
+-- Improved Rainfall Particles, expanded the screen-width & made the speed of each raindrop unique.
+-- Newest Version 
+
+![blood rain realistic rainfall](https://user-images.githubusercontent.com/21260839/33226446-d2443992-d185-11e7-9379-0ab596fdc378.PNG)
