@@ -9,37 +9,68 @@ import java.util.Random;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 
+/** Represents a JPanel implementation.
+ *  Also of the type ActionListener, implementing such methods.
+ *
+ * @author Shane Creedon
+ * @author www.skybreak.cf
+ * @version 0.0.1
+ * @since 0.0.1
+ */
 public class RenderPanel extends JPanel implements ActionListener {
 
 	private RainDrop[] rain;
-	private Timer timer;
-	
+
+    /**
+     * Constructor for RenderPanel, an extension of JPanel.
+     *
+     * This class hones the ability to paint the rain particles to the screen.
+     * It also controls how they behave and interact within the 2D plain.
+     *
+     * @param raindropAmount The amount of rain objects to be created
+     */
 	public RenderPanel(int raindropAmount) {
-		this.rain = new RainDrop[raindropAmount];
-		this.timer = new Timer(3, this);
+		rain = new RainDrop[raindropAmount];
+        new Timer(15, this).start();
 		createRain();
 	}
-	
+
+    /**
+     * Generator method which populates the private array class member: {@link #rain}
+     */
 	private void createRain() {
-		for(int i = 0; i < rain.length; i++)
-			this.rain[i] = new RainDrop();
+		for(int i = 0; i < rain.length; i++) {
+            RainDrop rainDrop = new RainDrop();
+            this.rain[i] = rainDrop;
+        }
 	}
-	
+
+    /**
+     * Paint component method override from parent.
+     *
+     * Method override from parent class.
+     * Specific implementation details involve, creating a rectangle with appropriate width and height, using the
+     * graphics object. This rectangle is drawn to the display. If the Y-position is greater than the display height,
+     * reset the rain particle object to Y-position zero. This gives the effect of infinite rainfall.
+     *
+     * @param gfx Graphics object that we can use to create shapes on the dispaly
+     */
+	@Override
 	protected void paintComponent(Graphics gfx) {
 		super.paintComponent(gfx);
 		gfx.fillRect(0, 0, getWidth(), getHeight());
 		
-		for(RainDrop r : rain) {
-			if(r.getY() > getHeight()) {
-				r.setX((Math.abs(new Random().nextInt(1000))));
-				r.setY(0);
-			}
-			r.drawToScreen(gfx);	
-		}
-
-		timer.start();
+		for(RainDrop rainDrop : rain) {
+            if (rainDrop.getY() > getHeight()) {
+                rainDrop.setX((Math.abs(new Random().nextInt(1000))));
+                rainDrop.setY(0);
+                rainDrop.setSpeed(rainDrop.getNewVelocity());
+            }
+            rainDrop.drawToScreen(gfx);
+        }
 	}
 
+	@Override
 	public void actionPerformed(ActionEvent e) {
 		repaint();
 	}

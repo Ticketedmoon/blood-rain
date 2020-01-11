@@ -5,6 +5,13 @@ import java.awt.Dimension;
 import java.awt.Toolkit;
 import javax.swing.JFrame;
 
+/** Represents a display for our animation.
+ *
+ * @author Shane Creedon
+ * @author www.skybreak.cf
+ * @version 0.0.1
+ * @since 0.0.1
+ */
 public class Display {
 
 	// Display objects
@@ -14,7 +21,7 @@ public class Display {
 	// Constants
 	private static final int WIDTH = 1000;
 	private static final int HEIGHT = 520;
-	private static final int TOTAL_RAIN_AMOUNT = 400;
+	private static final int TOTAL_RAIN_AMOUNT = 800;
 	private static final String TITLE = "Blood Rain - Created by Shane Creedon";
 
 	/**
