@@ -19,7 +19,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <junit.version>3.8.1</junit.version>
-        <spring.version>4.3.5.RELEASE</spring.version>
+        <spring.version>4.3.19.RELEASE</spring.version>
     </properties>
 
     <dependencies>
