@@ -10,14 +10,14 @@
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>Application</artifactId>
-    <name>Application Module</name>
+    <artifactId>BR-Launcher</artifactId>
+    <name>BR-Launcher Module</name>
     <packaging>jar</packaging>
 
     <dependencies>
         <dependency>
             <groupId>com.bloodrain.app</groupId>
-            <artifactId>Display</artifactId>
+            <artifactId>BR-Display</artifactId>
             <version>0.0.1-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>

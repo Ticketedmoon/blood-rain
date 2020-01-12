@@ -12,8 +12,8 @@
     <url>http://maven.apache.org</url>
 
     <modules>
-        <module>Application</module>
-        <module>Display</module>
+        <module>BR-Launcher</module>
+        <module>BR-Display</module>
     </modules>
 
     <properties>
