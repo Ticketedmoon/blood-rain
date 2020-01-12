@@ -1,6 +1,6 @@
-package com.bloodrain.display.DisplayPanels;
+package com.bloodrain.display.panels;
 
-import com.bloodrain.display.DisplayObjects.RainDrop;
+import com.bloodrain.display.entities.RainDrop;
 import java.awt.Graphics;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

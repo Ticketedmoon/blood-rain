@@ -1,6 +1,6 @@
-package com.bloodrain.application;
+package com.bloodrain.launcher;
 
-import com.bloodrain.display.DisplayConfiguration.Display;
+import com.bloodrain.display.configuration.Display;
 
 /** A launcher class.
  *

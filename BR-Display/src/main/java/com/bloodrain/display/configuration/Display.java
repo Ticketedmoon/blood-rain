@@ -1,6 +1,6 @@
-package com.bloodrain.display.DisplayConfiguration;
+package com.bloodrain.display.configuration;
 
-import com.bloodrain.display.DisplayPanels.RenderPanel;
+import com.bloodrain.display.panels.RenderPanel;
 import java.awt.Dimension;
 import java.awt.Toolkit;
 import javax.swing.JFrame;

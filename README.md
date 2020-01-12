@@ -20,3 +20,9 @@ _(Version of Blood rain from **Dec 05, 2017**)_
 
 - Improved Rainfall Particles in Size and Speed. 
 - Expanded the screen-width & made the speed of each raindrop unique.
+
+---
+
+##### Documentation directory contains javadoc files
+To view the documentation, open `index.html` with a browser.  
+Alternatively, all classes and methods belonging to the project's exported API are documented in the .java files.

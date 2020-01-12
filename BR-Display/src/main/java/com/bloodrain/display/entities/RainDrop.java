@@ -1,4 +1,4 @@
-package com.bloodrain.display.DisplayObjects;
+package com.bloodrain.display.entities;
 
 import java.awt.Color;
 import java.awt.Graphics;
