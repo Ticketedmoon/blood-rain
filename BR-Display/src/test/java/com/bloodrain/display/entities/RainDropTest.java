@@ -5,6 +5,7 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
+import org.mockito.Matchers;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.runners.MockitoJUnitRunner;
@@ -32,23 +33,23 @@ public class RainDropTest {
     }
 
     @Test
-    public void testDrawToScreen_setsColor() {
+    public void testDrawToScreenSetsColor() {
         testRainDrop.drawToScreen(graphicsMock);
-        Mockito.verify(graphicsMock, Mockito.times(1)).setColor(Mockito.any());
+        Mockito.verify(graphicsMock, Mockito.times(1)).setColor(Matchers.any());
     }
 
     @Test
-    public void testDrawToScreen_fillsRect() {
+    public void testDrawToScreenFillsRect() {
         testRainDrop.drawToScreen(graphicsMock);
-        Mockito.verify(graphicsMock, Mockito.times(1)).fillRect(Mockito.anyInt(),
-                Mockito.anyInt(),
-                Mockito.anyInt(),
-                Mockito.anyInt()
+        Mockito.verify(graphicsMock, Mockito.times(1)).fillRect(Matchers.anyInt(),
+                Matchers.anyInt(),
+                Matchers.anyInt(),
+                Matchers.anyInt()
         );
     }
 
     @Test
-    public void testDrawToScreen_updatesXYPosition() {
+    public void testDrawToScreenUpdatesXYPosition() {
         float rainDropYPositionBeforeDraw = testRainDrop.getY();
         testRainDrop.drawToScreen(graphicsMock);
         float rainDropYPositionAfterDraw = testRainDrop.getY();

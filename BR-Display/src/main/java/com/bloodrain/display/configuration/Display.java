@@ -4,6 +4,7 @@ import com.bloodrain.display.panels.RenderPanel;
 import java.awt.Dimension;
 import java.awt.Toolkit;
 import javax.swing.JFrame;
+import javax.swing.WindowConstants;
 
 /** Represents a display for our animation.
  *
@@ -12,7 +13,7 @@ import javax.swing.JFrame;
  * @version 0.0.1
  * @since 0.0.1
  */
-public class Display {
+public final class Display {
 
 	// Display objects
 	private static Display display;
@@ -33,7 +34,7 @@ public class Display {
 		frame = new JFrame(TITLE);
 		frame.setSize(WIDTH, HEIGHT);
 		frame.setResizable(false);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		frame.setLocation(dim.width/2 - frame.getWidth()/2, dim.height/2 - frame.getHeight()/2);
 
 		RenderPanel renderPanel = new RenderPanel(TOTAL_RAIN_AMOUNT);

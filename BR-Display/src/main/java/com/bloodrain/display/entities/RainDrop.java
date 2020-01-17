@@ -15,10 +15,10 @@ import java.util.concurrent.ThreadLocalRandom;
 public class RainDrop {
 
 	// Rain drop private class member attributes
+	private final int width;
+	private final int height;
 	private int positionX;
 	private int positionY;
-	private int width;
-	private int height;
 	private double speed;
 	private Color myColor;
 
@@ -71,8 +71,8 @@ public class RainDrop {
 	 */
 	public void drawToScreen(Graphics g) {
 		g.setColor(myColor);
-		g.fillRect(this.positionX, this.positionY, this.width, this.height);
-		this.positionY += (int) Math.ceil(this.speed);
-		this.positionX += (int) (Math.floor(this.speed / 7));
+		g.fillRect(positionX, positionY, width, height);
+		positionY += (int) Math.ceil(speed);
+		positionX += (int) (Math.floor(speed / 7));
 	}
 }

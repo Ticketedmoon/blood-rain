@@ -17,9 +17,9 @@ import javax.swing.Timer;
  * @version 0.0.1
  * @since 0.0.1
  */
-public class RenderPanel extends JPanel implements ActionListener {
+public final class RenderPanel extends JPanel implements ActionListener {
 
-	private RainDrop[] rain;
+	private transient RainDrop[] rain;
 
     /**
      * Constructor for RenderPanel, an extension of JPanel.
