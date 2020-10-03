@@ -22,7 +22,7 @@ public class Display {
 	private static final int WIDTH = 1000;
 	private static final int HEIGHT = 520;
 	private static final int TOTAL_RAIN_AMOUNT = 800;
-	private static final String TITLE = "Blood Rain - Created by Shane Creedon";
+	private static final String TITLE = "Blood Rain - Created by Shane";
 
 	/**
 	 * Private Constructor which the static factory will utilise.
